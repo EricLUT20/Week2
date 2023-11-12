@@ -21,4 +21,12 @@ app.post("/sum", (req, res) => {
   res.json({ sum })
 })
 
+let list = []
+
+app.post("/list", (req, res) => {
+  let input = req.body.text
+  list = list.concat(input)
+  res.json({ list: list })
+})
+
 app.listen(port, () => console.log("Server listening on port " + port))
