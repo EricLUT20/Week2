@@ -4,6 +4,8 @@ const port = 3000
 
 app.use(express.json())
 
+app.use(express.static("static"))
+
 app.get("/hello", (req, res) => {
   res.json({ msg: "Hello world" })
 })
