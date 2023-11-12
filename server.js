@@ -11,7 +11,7 @@ app.get("/hello", (req, res) => {
 })
 
 app.get("/echo/:id", (req, res) => {
-  let id = req.params.id
+  const id = req.params.id
   res.json({ id })
 })
 
